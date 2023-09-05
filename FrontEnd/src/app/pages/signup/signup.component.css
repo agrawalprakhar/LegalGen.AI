@@ -1,0 +1,45 @@
+/* signup.component.css */
+
+/* signup.component.css */
+.center-content{
+  text-align: center;
+color:  #000280;
+justify-content: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+/* signup.component.css */
+.logo-image {
+  width: 100px; /* Adjust the size as needed */
+  height: auto;
+  margin: 20px auto; /* Adjust the margin to position it */
+}
+
+.logo-icon {
+  font-size: 48px; /* Adjust the icon size as needed */
+  margin: 20px auto; /* Adjust the margin to position it */
+}
+
+
+.signup-card {
+  width: 350px;
+  text-align: center;
+  padding: 20px;
+  height: 632px;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.mat-mdc-raised-button.mat-unthemed{
+  color: white;
+  background-color: green;
+  height: 50px;
+}
+
