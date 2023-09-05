@@ -1,64 +1,63 @@
 /* login.component.css */
 
-.center-content{
-    text-align: center;
-  color:  #000280;
+.center-content {
+  text-align: center;
+  color: #000280;
   justify-content: center;
 }
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
-  }
-  /* signup.component.css */
-.logo-image {
-    width: 100px; /* Adjust the size as needed */
-    height: auto;
-    margin: 20px auto; /* Adjust the margin to position it */
-  }
-  
-  .logo-icon {
-    font-size: 48px; /* Adjust the icon size as needed */
-    margin: 20px auto; /* Adjust the margin to position it */
-  }
-  
-  
-  .signup-card {
-    width: 350px;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .full-width {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .mat-mdc-raised-button.mat-unthemed{
-    color: white;
-    background-color: green;
-    height: 50px;
-  }
-  .google-icon {
-    width: 34px; /* Adjust the size as needed */
-    height: 28px;
-    margin-right: 10px; /* Adjust the margin to separate the image from the button */
-  }
-  
-  /* Style the "Continue with Google" button */
-  .mat-button.google-button {
-    background-color: #fff;
-    color: #4285F4;
-  }
-  
-  /* Add hover effect if desired */
- .google-login-container:hover {
-    background-color: #f5f5f5;
-  }
-  .mat-mdc-button:not(:disabled) {
-    color: #a6b2bb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
 }
-p{
-    color: #a6b2bb;
+/* signup.component.css */
+.logo-image {
+  width: 100px; /* Adjust the size as needed */
+  height: auto;
+  margin: 20px auto; /* Adjust the margin to position it */
+}
+
+.logo-icon {
+  font-size: 48px; /* Adjust the icon size as needed */
+  margin: 20px auto; /* Adjust the margin to position it */
+}
+
+.signup-card {
+  width: 350px;
+  text-align: center;
+  padding: 20px;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.mat-mdc-raised-button.mat-unthemed {
+  color: white;
+  background-color: green;
+  height: 50px;
+}
+.google-icon {
+  width: 34px; /* Adjust the size as needed */
+  height: 28px;
+  margin-right: 10px; /* Adjust the margin to separate the image from the button */
+}
+
+/* Style the "Continue with Google" button */
+.mat-button.google-button {
+  background-color: #fff;
+  color: #4285f4;
+}
+
+/* Add hover effect if desired */
+.google-login-container:hover {
+  background-color: #f5f5f5;
+}
+.mat-mdc-button:not(:disabled) {
+  color: #a6b2bb;
+}
+p {
+  color: #a6b2bb;
 }

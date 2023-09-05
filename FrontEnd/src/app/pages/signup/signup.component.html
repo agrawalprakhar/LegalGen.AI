@@ -1,7 +1,7 @@
 <div class="container">
   <mat-card class="signup-card">
-    <div style="display: flex; justify-content: center; align-items: center;">
-      <img src="../../../assets/bharatlaw.png" width="50" height="50" alt="img">
+    <div style="display: flex; justify-content: center; align-items: center">
+      <img src="../../../assets/bharatlaw.png" width="50" height="50" alt="img" />
     </div>
     <mat-card-header class="center-content">
       <mat-card-title>Create Your account</mat-card-title>
@@ -9,30 +9,40 @@
     <form [formGroup]="signupForm" (ngSubmit)="onSubmit(signupForm.value)">
       <mat-card-content>
         <mat-form-field class="full-width">
-          <input matInput placeholder="Full Name" formControlName="fullName">
+          <input matInput placeholder="First Name" formControlName="firstName" />
         </mat-form-field>
         <mat-form-field class="full-width">
-          <input matInput placeholder="Email" formControlName="email">
+          <input matInput placeholder="Last Name" formControlName="lastName" />
         </mat-form-field>
         <mat-form-field class="full-width">
-          <input matInput type="password" placeholder="Password" formControlName="password">
+          <input matInput placeholder="Email" formControlName="email" />
         </mat-form-field>
-       
-       <mat-form-field class="full-width">
-        <mat-label>Select Organisation</mat-label>
-        <mat-select formControlName="organisation">
-          <mat-option value="lawyers">Lawyers</mat-option>
-          <mat-option value=" paralegals"> Paralegals</mat-option>
-          <mat-option value=" Law students and professors "> Law students and Professors </mat-option>
-          <mat-option value=" Legal researchers"> Legal Researchers</mat-option>
-          <mat-option value=" Government agencies"> Government Agencies</mat-option>
-          
-        </mat-select>
-      </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput type="password" placeholder="Password" formControlName="password" />
+        </mat-form-field>
 
+        <mat-form-field class="full-width">
+          <mat-label>Select Organisation</mat-label>
+          <mat-select formControlName="organisation">
+            <mat-option value="lawyers">Lawyers</mat-option>
+            <mat-option value=" paralegals"> Paralegals</mat-option>
+            <mat-option value=" Law students and professors ">
+              Law students and Professors
+            </mat-option>
+            <mat-option value=" Legal researchers">
+              Legal Researchers</mat-option>
+            <mat-option value=" Government agencies">
+              Government Agencies</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput type="number" placeholder="Contact Details" formControlName="contactDetails" />
+        </mat-form-field>
       </mat-card-content>
       <mat-card-actions>
-        <button class="full-width btn" mat-raised-button [disabled]="signupForm.invalid" type="submit">Continue</button>
+        <button class="full-width btn" mat-raised-button [disabled]="signupForm.invalid" type="submit">
+          Continue
+        </button>
       </mat-card-actions>
     </form>
     <p>Already Have an Account? <a href="/login">Login</a></p>
