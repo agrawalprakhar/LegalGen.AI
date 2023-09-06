@@ -33,6 +33,17 @@ export class LoginComponent {
   onSubmit(data: any[]) {
     if (this.loginForm.valid) {
       // Handle login form submission here
+      // this.userService.login(data.email,data.password).subscribe((result :any)=>{
+      //   if(result)
+      //   {
+      //     alert("You are Successfully Login");
+      //     this.router.navigate('/path');
+      //     localStorage.setItem("token",result.actionToken);
+      //   }
+      // },(error)=>{
+      //   alert("Invalid");
+      // }
+      // )
       console.log(this.loginForm.value);
       // this.userService.login(data)
     }

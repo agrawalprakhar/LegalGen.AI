@@ -18,6 +18,8 @@ import { LandingpageComponent } from './pages/landingpage/landingpage.component'
 import { ProfileComponent } from './shared/reusableComponents/profile/profile.component';
 import {MatIconModule} from '@angular/material/icon';
 import { ForgotpasswordComponent } from './shared/reusableComponents/forgotpassword/forgotpassword.component';
+import { ResetPasswordComponent } from './shared/reusableComponents/reset-password/reset-password.component';
+import { UpdatePasswordComponent } from './shared/reusableComponents/update-password/update-password.component';
 
 
 
@@ -30,6 +32,8 @@ import { ForgotpasswordComponent } from './shared/reusableComponents/forgotpassw
     LandingpageComponent,
     ProfileComponent,
     ForgotpasswordComponent,
+    ResetPasswordComponent,
+    UpdatePasswordComponent,
   ],
   imports: [
     BrowserModule,
