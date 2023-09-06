@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LandingpageComponent } from './pages/landingpage/landingpage.component';
+import { ResetPasswordComponent } from './shared/reusableComponents/reset-password/reset-password.component';
+import { UpdatePasswordComponent } from './shared/reusableComponents/update-password/update-password.component';
 // import { MainComponent } from './pages/main/main.component';
 
 const routes: Routes = [
@@ -13,7 +15,12 @@ const routes: Routes = [
   {
     path:'signup',component:SignupComponent
   },
-  
+  {
+    path:'reset-password',component:ResetPasswordComponent
+  },
+  {
+    path:'update-password',component:UpdatePasswordComponent
+  },
 ];
 
 @NgModule({

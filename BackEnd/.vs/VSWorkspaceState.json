@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\LegalGen.API",
+    "\\LegalGen.API\\LegalGen.API",
+    "\\LegalGen.API\\LegalGen.API\\Controllers"
+  ],
+  "SelectedNode": "\\LegalGen.API\\LegalGen.API\\Controllers\\UserController.cs",
+  "PreviewInSolutionExplorer": false
+}

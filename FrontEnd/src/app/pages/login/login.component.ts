@@ -15,6 +15,7 @@ import { UserService } from 'src/app/core/services/user.service';
 })
 export class LoginComponent {
   loginForm: FormGroup;
+  respdata:any;
 
   constructor(
     private fb: FormBuilder,
@@ -29,24 +30,39 @@ export class LoginComponent {
   getControl(name: any): AbstractControl | null {
     return this.loginForm.get(name);
   }
+  onSubmit(data: any) {
+    debugger
 
-  onSubmit(data: any[]) {
-    if (this.loginForm.valid) {
-      // Handle login form submission here
-      // this.userService.login(data.email,data.password).subscribe((result :any)=>{
-      //   if(result)
-      //   {
-      //     alert("You are Successfully Login");
-      //     this.router.navigate('/path');
-      //     localStorage.setItem("token",result.actionToken);
-      //   }
-      // },(error)=>{
-      //   alert("Invalid");
-      // }
-      // )
-      console.log(this.loginForm.value);
-      // this.userService.login(data)
-    }
+    this.userService.login(data).subscribe(item=> {
+      this.respdata=item;
+      if(this.respdata != null) {
+        localStorage.setItem('token', this.respdata.jwtToken);
+        console.log(data, this.respdata);
+      }
+
+    },(error)=>{
+      alert("Invalid");
+    })
+
   }
+
+  // onSubmit(data: any[]) {
+  //   if (this.loginForm.valid) {
+  //    // Handle login form submission here
+  //     this.userService.login(data:any).subscribe((result :any)=>{
+  //       if(result)
+  //       {
+  //         alert("You are Successfully Login");
+  //        // this.router.navigate('/path');
+  //         localStorage.setItem("token",result.actionToken);
+  //       }
+  //     },(error)=>{
+  //       alert("Invalid");
+  //     }
+  //     )
+  //     console.log(this.loginForm.value);
+  //     // this.userService.login(data)
+  //   }
+  // }
   loginWithGoogle() {}
 }
