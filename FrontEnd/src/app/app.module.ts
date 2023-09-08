@@ -7,7 +7,10 @@ import { AppComponent } from './app.component';
 import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import {  HttpClientModule } from '@angular/common/http';
 import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule}  from '@angular/material/input'
+import {MatInputModule}  from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
@@ -19,6 +22,10 @@ import { ProfileComponent } from './shared/reusableComponents/profile/profile.co
 import {MatIconModule} from '@angular/material/icon';
 import { ResetPasswordComponent } from './shared/reusableComponents/reset-password/reset-password.component';
 import { UpdatePasswordComponent } from './shared/reusableComponents/update-password/update-password.component';
+
+import { SearchComponent } from './shared/reusableComponents/search/search.component';
+import { SearchresultComponent } from './shared/reusableComponents/searchresult/searchresult.component';
+
 
 
 
@@ -33,6 +40,8 @@ import { UpdatePasswordComponent } from './shared/reusableComponents/update-pass
 
     ResetPasswordComponent,
     UpdatePasswordComponent,
+    SearchComponent,
+    SearchresultComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +56,9 @@ import { UpdatePasswordComponent } from './shared/reusableComponents/update-pass
     MatButtonModule,
     MatInputModule,
     MatIconModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatNativeDateModule
 
   ],
   providers: [],

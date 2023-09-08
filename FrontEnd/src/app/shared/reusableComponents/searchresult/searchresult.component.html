@@ -1,0 +1,85 @@
+<!-- <ng-container *ngIf="data.resp.length !== 0"> -->
+    <div class="row" style="margin-left: 132px;">
+      <div class="col-sm-12 col-md-8 col-lg-9">
+  
+        <!-- <ng-container *ngFor="let item of data.resp | keyvalue:returnZero; let i = index;">
+          <ng-container *ngIf="item.value">
+            <div class="law-card" *ngFor="let item2 of item.value | keyvalue:returnZero">
+              <ng-container *ngIf="item2.key !=='stats' && item2.key !=='common judgement among all facts'">
+                <div class="law-card-header" (click)="openPopup(item2.value['facts'])">
+                  <h4>{{item2.key}}</h4>
+                </div>
+                <div>
+                  <p style="margin-bottom: 2px!important;" class="information">Unless the contrary Is proved, the holder of the cheque recelved the cheque for the discharge in whole or
+                    In part of any debt or other lability. But even in Section 139 N. I. Act, the legal presumption I created only
+                    for the cheque so recelved for the discharge In whole or In part of any deb or other lability. <a style="text-decoration: underline; color: #09ad09;">Read all</a>
+                    <button style="border: 1px solid lightgray; border-radius: 9px; padding: 5px; margin-left: 500px; background-color: white; margin-top: 10px;">+ Add In Research Book</button>
+                  </p>
+                  <p style="margin-bottom: 2px!important;" class="information">Unless the contrary Is proved, the holder of the cheque recelved the cheque for the discharge in whole or
+                    In part of any debt or other lability. But even in Section 139 N. I. Act, the legal presumption I created only
+                    for the cheque so recelved for the discharge In whole or In part of any deb or other lability. <a style="text-decoration: underline; color: #09ad09;">Read all</a>
+                    <button style="border: 1px solid lightgray; border-radius: 9px; padding: 5px; margin-left: 500px; background-color: white; margin-top: 10px;">+ Add In Research Book</button>
+                  </p>
+                  <p style="margin-bottom: 15px!important;" class="information">Unless the contrary Is proved, the holder of the cheque recelved the cheque for the discharge in whole or
+                    In part of any debt or other lability. But even in Section 139 N. I. Act, the legal presumption I created only
+                    for the cheque so recelved for the discharge In whole or In part of any deb or other lability. <a style="text-decoration: underline; color: #09ad09;">Read all</a>
+                    <button style="border: 1px solid lightgray; border-radius: 9px; padding: 5px; margin-left: 500px; background-color: white; margin-top: 10px;">+ Add In Research Book</button>
+                  </p>
+                </div>
+                <div class="popup-overlay" *ngIf="isPopupOpen">
+                  <div class="popup-content">
+                    <h2 style="margin: 15px 0 25px 0;">Relevant</h2>
+                    <button (click)="close()">Close</button>
+                    <ul *ngFor="let item of relevant">
+                      <li>{{item}}</li>
+                    </ul>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </ng-container>
+        </ng-container> -->
+      </div>
+  
+      <div class="col-sm-12 col-md-4 col-lg-3" style="margin: -155px -50px 0 50px;">
+        <!-- <ng-container *ngFor="let stat of stats | keyvalue:returnZero">
+          <ng-container *ngIf="stat.value"> -->
+            <div class="law-rgtbar" >
+              <h4>ENTERED FACT</h4>
+              <ul class="list-point list-unstyled mb-0">
+                <li>hello</li>
+              </ul>
+            </div>
+          <!-- </ng-container> -->
+        <!-- </ng-container> -->
+        <div class="law-rgtbar">
+          <h4>Relevant Judgement</h4>
+          <ul class="list-group policy-cate list-group-numbered">
+            <ng-container *ngFor="let judgment of common_judgements | keyvalue:returnZero">
+              <ng-container *ngIf="judgment.value">
+                <li *ngFor="let facts of judgment.value | keyvalue:returnZero" class="list-group-item">
+                  {{facts.value}}</li>
+              </ng-container>
+            </ng-container>
+          </ul>
+          <p class="output-tag" *ngIf="!common_judgements || common_judgements.length === 0">Not Available</p>
+        </div>
+        <div class="law-rgtbar">
+          <h4>Statistics</h4>
+          <ul class="list-point list-unstyled mb-0">
+            <li>Win 60%</li>
+            <li>Loss 20%</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <!-- </ng-container> -->
+  
+  <div class="card" style="width:433px; height:80px; margin-left: 295px; display: flex;  align-items: center; ;"
+    *ngIf="data.resp.length === 0">
+    <div class="card-body">
+      <div class="no-results">
+        <h3 class="text-center mb-4"><i class="fa fa-frown-o" aria-hidden="true"></i> No Results Found</h3>
+      </div>
+    </div>
+  </div>

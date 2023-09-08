@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from 'src/app/core/services/user.service';
 
 @Component({
   selector: 'app-update-password',
@@ -9,11 +11,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class UpdatePasswordComponent {
   updatePasswordForm !: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private route: ActivatedRoute,
+    private formBuilder: FormBuilder,
+    private userservice: UserService,
+    private router : Router) { }
 
   ngOnInit() {
     this.updatePasswordForm = this.formBuilder.group({
-      currentPassword: ['', [Validators.required]],
+    
       newPassword: ['', [Validators.required]],
       confirmPassword: ['', [Validators.required]]
     }, {
@@ -22,12 +27,12 @@ export class UpdatePasswordComponent {
   }
 
   passwordMatchValidator(formGroup: FormGroup) {
-    const currentPasswordControl = formGroup.get('currentPassword');
+    
     const newPasswordControl = formGroup.get('newPassword');
     const confirmPasswordControl = formGroup.get('confirmPassword');
   
-    if (currentPasswordControl && newPasswordControl && confirmPasswordControl) {
-      const currentPassword = currentPasswordControl.value;
+    if ( newPasswordControl && confirmPasswordControl) {
+      
       const newPassword = newPasswordControl.value;
       const confirmPassword = confirmPasswordControl.value;
   
@@ -41,11 +46,18 @@ export class UpdatePasswordComponent {
   
     return null; // Default case: return null
   }
-  
+  getControl(name: any): AbstractControl | null {
+    return this.updatePasswordForm.get(name);
+  }
 
-  onSubmit() {
+  onSubmit(password:string) {
     if (this.updatePasswordForm.valid) {
       // Implement your update password logic here
+      let token = this.route.snapshot.paramMap.get('token');
+      this.userservice.updatePassword(password, token).subscribe();
+      alert('Successfully Updated the password');
+      this.router.navigateByUrl('/register');
+    }
     }
   }
-}
+
